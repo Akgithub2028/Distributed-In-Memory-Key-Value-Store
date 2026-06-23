@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  primary:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: redis_primary
+    ports:
+      - "6379:6379"
+    volumes:
+      - primary_data:/app
+    command: ["--port", "6379"]
+
+  replica:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: redis_replica
+    ports:
+      - "6380:6380"
+    volumes:
+      - replica_data:/app
+    depends_on:
+      - primary
+    command: ["--port", "6380", "--replicaof", "primary", "6379"]
+
+volumes:
+  primary_data:
+  replica_data:

@@ -1,0 +1,22 @@
+# Build artifacts
+build/
+*.o
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Database state files
+*.aof
+appendonly.aof
+replica_aof.aof
+
+# Testing and temp directories
+primary_dir/
+replica_dir/
+bench_replica_dir/
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,13 @@
+{
+    "throughput_and_latency": {
+        "throughput_req_sec": 15627.898535630382,
+        "p50_latency_ms": 0.5598144998657517,
+        "p95_latency_ms": 1.2510465003288118,
+        "p99_latency_ms": 1.7822044992499286
+    },
+    "recovery_time_ms": 188.20031500217738,
+    "replication_lag": {
+        "avg_lag_ms": 0.17623845018533757,
+        "p99_lag_ms": 1.194833999761613
+    }
+}
